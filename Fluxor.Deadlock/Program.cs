@@ -23,12 +23,6 @@ StartMessageBombardment();
 
 await store.InitializeAsync();
 
-// simulation of the dispatch other actions..
-foreach (var _ in Enumerable.Range(0, 1000))
-{
-    dispatcher.Dispatch(new IncrementCounterAction());
-}
-
 Console.ReadLine();
 
 // one of the possible fixes is to use one shared resource for dispatcher and store lock statements
